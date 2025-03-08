@@ -10,7 +10,6 @@ export const getItem = (key: string) => {
       const item = localStorage.getItem(key);
       return item ? JSON.parse(item) : null;
     } catch (error) {
-      console.error(`Erro ao parsear JSON do localStorage para a chave "${key}":`, error);
       return null;
     }
   }
